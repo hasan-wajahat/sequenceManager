@@ -3,3 +3,19 @@ $blackBackground: #262626;
 :host {
   background-color: $blackBackground;
 }
+
+.sideNav {
+  background-color: #ff5546;
+  color: aqua;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 200px;
+  float: left;
+}
+
+.mainNav {
+  background-color: aqua;
+  margin-left: 200px;
+}
