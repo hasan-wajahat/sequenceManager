@@ -1,3 +1,10 @@
 <ul>
-  <li *ngFor="let seq of sequence">{{seq.name}}</li>
+  <li *ngFor="let seq of sequence">
+    {{seq.name}}
+    <ul *ngIf="seq.name == 'Contact'">
+      <li *ngFor="let shrt of short">
+        {{shrt.name}}
+      </li>
+    </ul>
+  </li>
 </ul>
