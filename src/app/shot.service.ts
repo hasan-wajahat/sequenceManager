@@ -4,9 +4,15 @@ import {Http, Response, URLSearchParams} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
+class nestedShort {
+  constructor(public seq: number,
+              public shotID: string,
+              public shotName: string) {
+  }
+}
 class Short {
-  constructor(public id: string,
-              public name: string) {
+  constructor(public sequenceSequence: number,
+              public shorts: nestedShort) {
   }
 }
 

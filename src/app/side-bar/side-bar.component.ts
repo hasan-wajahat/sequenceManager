@@ -8,9 +8,15 @@ class Sequence {
               public name: string) {
   }
 }
+class nestedShort {
+  constructor(public seq: number,
+              public shotID: string,
+              public shotName: string) {
+  }
+}
 class Short {
-  constructor(public id: string,
-              public name: string) {
+  constructor(public sequenceSequence: number,
+              public shorts: nestedShort) {
   }
 }
 
