@@ -13,14 +13,15 @@ class Sequence {
 
 @Injectable()
 export class SeqService {
-  private url = '../assets/sequenceList.json';
+  // private url = '../assets/sequenceList.json';
+  private url = 'whyu0001.php';
 
   constructor(private http: Http) {
   }
 
   getSeq(): Observable<Sequence[]> {
     let params = new URLSearchParams();
-    params.set('Mode', 'GetSequenceListByProjIDIncludingALL');
+    params.set('Mode', 'GetSequenceListByProjID');
     params.set('ProjID', 'RNT');
     return this.http.get(this.url, {search: params}).map(this.extractData);
   }

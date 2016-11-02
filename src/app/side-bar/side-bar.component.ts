@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, sequence} from '@angular/core';
 import {SeqService} from '../sequence.service';
 import {ShortService} from '../shot.service';
 
@@ -36,19 +36,28 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit() {
     this.getSequence();
-    this.getShort();
   }
 
   getSequence() {
     this.seqService.getSeq().subscribe(
-      sequence => this.sequence = sequence
+      sequence => this.getShort(sequence)
     );
   }
 
-  getShort() {
-    this.shortService.getShort().subscribe(
+  getShort(seq: Sequence[]) {
+    this.sequence = seq;
+    var str = "";
+    for (let singleSeq of this.sequence) {
+      str += singleSeq.seq.toString() + ",";
+    }
+    str = str.slice(0, -1);
+    this.shortService.getShort(str).subscribe(
       short => this.short = short
     );
+  }
+
+  test() {
+    alert("hello");
   }
 
 }
