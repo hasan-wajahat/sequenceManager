@@ -1,6 +1,7 @@
 import {Component, OnInit, sequence} from '@angular/core';
 import {SeqService} from '../sequence.service';
 import {ShortService} from '../shot.service';
+import {Hash} from "crypto";
 
 class Sequence {
   constructor(public seq: number,
@@ -30,6 +31,7 @@ class Short {
 export class SideBarComponent implements OnInit {
   sequence: Sequence[];
   short: Short[];
+  sequenceDisplay: Object;
 
   constructor(private seqService: SeqService, private shortService: ShortService) {
   }
@@ -46,9 +48,11 @@ export class SideBarComponent implements OnInit {
 
   getShort(seq: Sequence[]) {
     this.sequence = seq;
+    this.sequenceDisplay = [];
     var str = "";
     for (let singleSeq of this.sequence) {
       str += singleSeq.seq.toString() + ",";
+      this.sequenceDisplay[singleSeq.seq] = true;
     }
     str = str.slice(0, -1);
     this.shortService.getShort(str).subscribe(
@@ -56,8 +60,8 @@ export class SideBarComponent implements OnInit {
     );
   }
 
-  test() {
-    alert("hello");
+  test(seq: number) {
+    this.sequenceDisplay[seq] = !this.sequenceDisplay[seq];
   }
 
 }

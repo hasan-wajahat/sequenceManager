@@ -1,9 +1,9 @@
 <div *ngFor="let seq of sequence">
-  <div>
+  <div (click)="test(seq.seq)">
     {{seq.name}}
   </div>
-  <div id="div-{{seq.seq}}" *ngFor="let seqno of short">
-    <ul *ngIf="seq.seq == seqno.sequenceSequence">
+  <div *ngFor="let seqno of short">
+    <ul *ngIf="seq.seq == seqno.sequenceSequence && sequenceDisplay[seq.seq]">
       <li *ngFor="let shrt of seqno.shorts">
         {{shrt.shotName}}
       </li>
