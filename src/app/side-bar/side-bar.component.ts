@@ -1,7 +1,7 @@
 import {Component, OnInit, sequence} from '@angular/core';
 import {SeqService} from '../sequence.service';
 import {ShortService} from '../shot.service';
-import {Hash} from "crypto";
+import {Router} from '@angular/router';
 
 class Sequence {
   constructor(public seq: number,
@@ -33,7 +33,7 @@ export class SideBarComponent implements OnInit {
   short: Short[];
   sequenceDisplay: Object;
 
-  constructor(private seqService: SeqService, private shortService: ShortService) {
+  constructor(private router: Router, private seqService: SeqService, private shortService: ShortService) {
   }
 
   ngOnInit() {
@@ -60,8 +60,13 @@ export class SideBarComponent implements OnInit {
     );
   }
 
-  test(seq: number) {
+  toggleDisplay(seq: number) {
     this.sequenceDisplay[seq] = !this.sequenceDisplay[seq];
+  }
+
+  goToShortDetail(short: string) {
+    let link = ['/short', short];
+    this.router.navigate(link);
   }
 
 }

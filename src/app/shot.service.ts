@@ -25,8 +25,8 @@ class Short {
 
 @Injectable()
 export class ShortService {
-  // private url = '../assets/shotList.json';
-  private url = '../angularAPI/ShotList.php';
+  private url = '../assets/shotList.json';
+  // private url = '../angularAPI/ShotList.php';
 
   constructor(private http: Http) {
   }
