@@ -1,3 +1,7 @@
-<p>
-  short sequence = {{id}}
-</p>
+<div *ngFor="let pub of pubHistoryList">
+  <div>
+    {{pub.verNo}}
+    {{pub.publisher}}
+    {{pub.pbDate}}
+  </div>
+</div>

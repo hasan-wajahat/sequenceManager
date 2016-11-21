@@ -13,8 +13,8 @@ class Sequence {
 
 @Injectable()
 export class SeqService {
-  private url = '../assets/sequenceList.json';
-  // private url = 'whyu0001.php';
+  // private url = '../assets/sequenceList.json';
+  private url = 'whyu0001.php';
 
   constructor(private http: Http) {
   }
