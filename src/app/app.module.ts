@@ -10,6 +10,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import {ShortDetailComponent} from './short-detail/short-detail.component';
 import {EmptyComponent} from './empty/empty.component';
+import { PublishItemComponent } from './short-detail/publish-item/publish-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {EmptyComponent} from './empty/empty.component';
     SideBarComponent,
     MainPageComponent,
     ShortDetailComponent,
-    EmptyComponent
+    EmptyComponent,
+    PublishItemComponent
   ],
   imports: [
     BrowserModule,

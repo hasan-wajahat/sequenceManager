@@ -16,8 +16,8 @@ class PublishHistoryList {
 @Injectable()
 export class PublishHistoryService {
 
-  // private url = '../assets/publishList.json';
-  private url = '../angularAPI/PublishHistory.php';
+  private url = '../assets/publishList.json';
+  // private url = '../angularAPI/PublishHistory.php';
 
   constructor(private http: Http) { }
 
