@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params, Router, NavigationEnd} from '@angular/router';
+import {ActivatedRoute, Params} from '@angular/router';
 import {PublishHistoryService} from '../publish-history.service';
+import {Observable} from "rxjs";
+import 'rxjs/add/operator/switchMap';
 
 class PublishHistoryList {
   constructor(public verNo: string,
@@ -23,25 +25,16 @@ class PublishHistoryList {
 export class ShortDetailComponent implements OnInit {
 
   id: string;
-  pubHistoryList: PublishHistoryList[];
+  pubHistoryList: Observable<PublishHistoryList[]>;
 
-  constructor(private route: ActivatedRoute, private pubHistoryService: PublishHistoryService, private router: Router) {
-    router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.route.params.forEach((params: Params) => {
-          this.id = params['seq'];
-        });
-        this.getPubHistoryList(this.id);
-      }
-    })
+  constructor(private route: ActivatedRoute, private pubHistoryService: PublishHistoryService) {
   }
 
   ngOnInit() {
-  }
-
-  getPubHistoryList(shortSeq) {
-    this.pubHistoryService.getPubList(shortSeq).subscribe(
-      list => this.pubHistoryList = list
-    )
+    this.pubHistoryList = this.route.params.switchMap((params: Params) =>{
+      this.id = params['seq'];
+      console.log('hello');
+      return this.pubHistoryService.getPubList(this.id);
+    });
   }
 }

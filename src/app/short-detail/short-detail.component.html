@@ -1,4 +1,4 @@
-<div *ngFor="let pub of pubHistoryList">
+<div *ngFor="let pub of pubHistoryList | async">
   <div>
     {{pub.verNo}}
     {{pub.publisher}}
