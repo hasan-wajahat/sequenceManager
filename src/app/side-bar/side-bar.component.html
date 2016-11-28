@@ -2,7 +2,7 @@
   <div (click)="toggleDisplay(seq.seq)">
     {{seq.name}}
   </div>
-  <div *ngFor="let seqno of short">
+  <div *ngFor="let seqno of short" class="listItems">
     <ul *ngIf="seq.seq == seqno.sequenceSequence && sequenceDisplay[seq.seq]">
       <li *ngFor="let shrt of seqno.shorts" (click)="goToShortDetail(shrt.seq)">
         {{shrt.shotName}}

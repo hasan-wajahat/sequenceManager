@@ -1,7 +1,5 @@
-<div *ngFor="let pub of pubHistoryList | async">
-  <div>
-    {{pub.verNo}}
-    {{pub.publisher}}
-    {{pub.pbDate}}
-  </div>
+<div class="publishItemContainer">
+  <app-publish-item *ngFor="let pub of pubHistoryList | async" class="publishItem"
+      [publishItem]="pub">
+  </app-publish-item>
 </div>

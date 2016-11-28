@@ -1,15 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Http, Response, URLSearchParams} from '@angular/http';
-
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import {Sequence} from './object-classes/service-classes';
 
-class Sequence {
-  constructor(public seq: number,
-              public id: string,
-              public name: string) {
-  }
-}
 
 @Injectable()
 export class SeqService {
