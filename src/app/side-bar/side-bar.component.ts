@@ -2,24 +2,9 @@ import {Component, OnInit, sequence} from '@angular/core';
 import {SeqService} from '../sequence.service';
 import {ShortService} from '../shot.service';
 import {Router} from '@angular/router';
+import {Sequence} from '../object-classes/service-classes';
+import {Short} from '../object-classes/service-classes'
 
-class Sequence {
-  constructor(public seq: number,
-              public id: string,
-              public name: string) {
-  }
-}
-class nestedShort {
-  constructor(public seq: number,
-              public shotID: string,
-              public shotName: string) {
-  }
-}
-class Short {
-  constructor(public sequenceSequence: number,
-              public shorts: nestedShort) {
-  }
-}
 
 @Component({
   selector: 'app-side-bar',

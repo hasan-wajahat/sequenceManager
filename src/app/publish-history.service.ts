@@ -1,17 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Http, Response, URLSearchParams} from '@angular/http';
-
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
-class PublishHistoryList {
-  constructor(public verNo: string,
-              public taskType: number,
-              public publisher: string,
-              public pbDate: string,
-              public pbCmt: string) {
-  }
-}
+import {PublishHistoryList} from './object-classes/service-classes';
 
 @Injectable()
 export class PublishHistoryService {
