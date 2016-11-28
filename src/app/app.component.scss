@@ -1,12 +1,12 @@
-$blackBackground: #262626;
-
+$sideNavBackground: #66B9BF;
+$mainNavBackground: #008B95;
 :host {
-  background-color: $blackBackground;
+  background-color: $mainNavBackground;
 }
 
 .sideNav {
-  background-color: #ff5546;
-  color: aqua;
+  background-color: $sideNavBackground;
+  color: white;
   height: 100%;
   top: 0;
   left: 0;
@@ -16,6 +16,6 @@ $blackBackground: #262626;
 }
 
 .mainNav {
-  background-color: aqua;
   margin-left: 200px;
+  background-color: $mainNavBackground;
 }

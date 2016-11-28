@@ -1,8 +1,7 @@
-$publishBlockColor : #ae3ea0;
+$publishBlockColor : #E37222;
 .publishItemBlock{
   background-color: $publishBlockColor;
-  border: dotted;
-  border-width: 2px;
-  border-color: #548264;
+  color: white;
+  border: 2px dotted #548264;
   height: 150px;
 }
