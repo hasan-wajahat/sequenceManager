@@ -1,9 +1,9 @@
 export class PublishHistoryList {
-  constructor(public verNo: string,
+  constructor(public id: number,
               public taskType: number,
               public publisher: string,
-              public pbDate: string,
-              public pbCmt: string) {
+              public image?: string,
+              public comment?: string) {
   }
 }
 

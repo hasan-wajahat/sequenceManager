@@ -19,7 +19,7 @@ export class UploadFormComponent implements OnInit {
     this.route.params.subscribe(
       params => {
         this.shotID = +params['short'];
-        this.publishItem = new PublishItem(1,this.shotID,'first','','this is the first item');
+        this.publishItem = new PublishItem(1,null,this.shotID,null,null,'this is the first item');
       });
   }
 

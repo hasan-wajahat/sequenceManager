@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {PublishHistoryService} from '../../services/publish-history.service';
-import {Observable} from "rxjs";
 import 'rxjs/add/operator/switchMap';
 import {PublishHistoryList} from '../../object-classes/service-classes'
 
@@ -21,11 +20,11 @@ export class ShortDetailComponent implements OnInit {
 
 }
 
-  
+
 
   ngOnInit() {
      this.route.params.subscribe(params =>{
-       
+
        this.id = params['short'];
        this.pubHistoryService.getPubList(this.id).subscribe(item=>{this.pubHistoryList=item});
     });
