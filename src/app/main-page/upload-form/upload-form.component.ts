@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {PublishItem} from '../../object-classes/publish-item';
 import {ActivatedRoute, Params} from '@angular/router';
 
@@ -11,6 +11,7 @@ export class UploadFormComponent implements OnInit {
 
   shotID: number;
   publishItem;
+  @ViewChild("imgInput") imgInput;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -18,9 +19,16 @@ export class UploadFormComponent implements OnInit {
     this.route.params.subscribe(
       params => {
         this.shotID = +params['short'];
-        this.publishItem = new PublishItem(1,this.shotID,'first','this is the first item');
+        this.publishItem = new PublishItem(1,this.shotID,'first','','this is the first item');
       });
   }
 
+  onSubmit(){
+    let file = this.imgInput.nativeElement.files;
+    if(file && file[0]) {
+      this.publishItem.fileName = this.imgInput.nativeElement.files[0].name;
+    }
+    console.log(this.publishItem);
+  }
 
 }
