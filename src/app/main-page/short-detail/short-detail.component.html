@@ -1,3 +1,4 @@
+<button class="uploadButton btn" (click)="goToUploadForm()"> Add New Item</button>
 <div class="publishItemContainer">
   <app-publish-item *ngFor="let pub of pubHistoryList | async" class="publishItem"
       [publishItem]="pub">
