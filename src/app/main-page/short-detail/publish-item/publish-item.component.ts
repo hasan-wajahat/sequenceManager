@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 import {PublishHistoryList} from '../../../object-classes/service-classes';
 
 @Component({
@@ -9,10 +9,21 @@ import {PublishHistoryList} from '../../../object-classes/service-classes';
 export class PublishItemComponent implements OnInit {
 
   @Input() publishItem: PublishHistoryList;
+   @Output()  pubItem = new EventEmitter();
+  
+
 
   constructor() { }
 
   ngOnInit() {
   }
+
+deletePublishItem(){
+  // console.log(this.publishItem);
+         this.pubItem.next(this.publishItem);
+
+
+}
+
 
 }
