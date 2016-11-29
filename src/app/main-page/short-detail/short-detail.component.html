@@ -1,5 +1,7 @@
+<button class="uploadButton btn" (click)="goToUploadForm()"> Add New Item</button>
 <div class="publishItemContainer">
-  <app-publish-item *ngFor="let pub of pubHistoryList | async" class="publishItem"
-      [publishItem]="pub">
+  <app-publish-item *ngFor="let pub of pubHistoryList " class="publishItem"
+      [publishItem]="pub" 
+      (pubItem)="onDelete($event)"   >
   </app-publish-item>
 </div>

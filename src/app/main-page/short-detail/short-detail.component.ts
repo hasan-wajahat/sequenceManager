@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {PublishHistoryService} from '../../services/publish-history.service';
 import {Observable} from "rxjs";
 import 'rxjs/add/operator/switchMap';
@@ -15,15 +15,33 @@ import {PublishHistoryList} from '../../object-classes/service-classes'
 export class ShortDetailComponent implements OnInit {
 
   id: string;
-  pubHistoryList: Observable<PublishHistoryList[]>;
+  pubHistoryList: PublishHistoryList[];
+  constructor(private route: ActivatedRoute, private router: Router, private pubHistoryService: PublishHistoryService) {
 
-  constructor(private route: ActivatedRoute, private pubHistoryService: PublishHistoryService) {
-  }
+
+}
+
+  
 
   ngOnInit() {
-    this.pubHistoryList = this.route.params.switchMap((params: Params) =>{
-      this.id = params['seq'];
-      return this.pubHistoryService.getPubList(this.id);
+     this.route.params.subscribe(params =>{
+       
+       this.id = params['short'];
+       this.pubHistoryService.getPubList(this.id).subscribe(item=>{this.pubHistoryList=item});
     });
+  }
+
+  goToUploadForm(){
+    let link = ['/new-item', this.id];
+    this.router.navigate(link);
+  }
+
+
+  onDelete(pubItem: PublishHistoryList){
+
+    // this.pubHistoryList.indexOf(pubItem);
+    this.pubHistoryList.splice(this.pubHistoryList.indexOf(pubItem),1);
+
+
   }
 }

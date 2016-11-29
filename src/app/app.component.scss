@@ -6,13 +6,16 @@ $mainNavBackground: #008B95;
 
 .sideNav {
   background-color: $sideNavBackground;
-  color: white;
+  color: #333;
   height: 100%;
   top: 0;
   left: 0;
   position: absolute;
   width: 200px;
   float: left;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 600;
 }
 
 .mainNav {
