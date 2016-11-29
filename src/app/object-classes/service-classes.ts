@@ -5,16 +5,6 @@ export class PublishHistoryList {
               public pbDate: string,
               public pbCmt: string) {
   }
-
-  pubItem : PublishHistoryList[];
-
-  removeItem(item: PublishHistoryList) {
-    const index = this.pubItem.indexOf(item);
-    this.pubItem.splice(index, 1);
-  }
-   
-  
-
 }
 
 export class Sequence {
