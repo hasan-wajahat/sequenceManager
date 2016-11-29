@@ -1,6 +1,6 @@
-import {Component, OnInit, sequence} from '@angular/core';
-import {SeqService} from '../sequence.service';
-import {ShortService} from '../shot.service';
+import {Component, OnInit} from '@angular/core';
+import {SeqService} from '../services/sequence.service';
+import {ShortService} from '../services/shot.service';
 import {Router} from '@angular/router';
 import {Sequence} from '../object-classes/service-classes';
 import {Short} from '../object-classes/service-classes'

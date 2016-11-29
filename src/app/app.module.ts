@@ -8,9 +8,9 @@ import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import {ShortDetailComponent} from './short-detail/short-detail.component';
-import {EmptyComponent} from './empty/empty.component';
-import { PublishItemComponent } from './short-detail/publish-item/publish-item.component';
+import {ShortDetailComponent} from './main-page/short-detail/short-detail.component';
+import {EmptyComponent} from './main-page/empty/empty.component';
+import { PublishItemComponent } from './main-page/short-detail/publish-item/publish-item.component';
 
 @NgModule({
   declarations: [

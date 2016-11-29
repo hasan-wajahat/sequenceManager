@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {PublishHistoryService} from '../publish-history.service';
+import {PublishHistoryService} from '../../services/publish-history.service';
 import {Observable} from "rxjs";
 import 'rxjs/add/operator/switchMap';
-import {PublishHistoryList} from '../object-classes/service-classes'
+import {PublishHistoryList} from '../../object-classes/service-classes'
 
 
 @Component({
   selector: 'app-short-detail',
-  templateUrl: './short-detail.component.html',
+  templateUrl: 'short-detail.component.html',
   styleUrls: ['short-detail.component.scss'],
   providers: [PublishHistoryService]
 })

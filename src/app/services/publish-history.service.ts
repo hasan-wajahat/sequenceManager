@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http, Response, URLSearchParams} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import {PublishHistoryList} from './object-classes/service-classes';
+import {PublishHistoryList} from '../object-classes/service-classes';
 
 @Injectable()
 export class PublishHistoryService {

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {PublishHistoryList} from '../../object-classes/service-classes';
+import {PublishHistoryList} from '../../../object-classes/service-classes';
 
 @Component({
   selector: 'app-publish-item',
