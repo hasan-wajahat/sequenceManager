@@ -1,12 +1,10 @@
 <div class="publishItemBlock">
   <p>
-    {{publishItem.verNo}}
+    {{publishItem.id}}
   </p>
+  <img src="../../../../assets/{{publishItem.image}}" style="width:150px;height:80px;" *ngIf="publishItem.image">
   <p>
-    {{publishItem.publisher}}
-  </p>
-  <p>
-    {{publishItem.pbCmt}}
+    {{publishItem.comment}}
   </p>
   <button class="deleteButton btn" (click)="deletePublishItem()"> Delete</button>
 
