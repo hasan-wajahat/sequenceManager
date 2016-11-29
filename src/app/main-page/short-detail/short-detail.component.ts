@@ -15,20 +15,33 @@ import {PublishHistoryList} from '../../object-classes/service-classes'
 export class ShortDetailComponent implements OnInit {
 
   id: string;
-  pubHistoryList: Observable<PublishHistoryList[]>;
-
+  pubHistoryList: PublishHistoryList[];
   constructor(private route: ActivatedRoute, private router: Router, private pubHistoryService: PublishHistoryService) {
-  }
+
+
+}
+
+  
 
   ngOnInit() {
-    this.pubHistoryList = this.route.params.switchMap((params: Params) =>{
-      this.id = params['short'];
-      return this.pubHistoryService.getPubList(this.id);
+     this.route.params.subscribe(params =>{
+       
+       this.id = params['short'];
+       this.pubHistoryService.getPubList(this.id).subscribe(item=>{this.pubHistoryList=item});
     });
   }
 
   goToUploadForm(){
     let link = ['/new-item', this.id];
     this.router.navigate(link);
+  }
+
+
+  onDelete(pubItem: PublishHistoryList){
+
+    // this.pubHistoryList.indexOf(pubItem);
+    this.pubHistoryList.splice(this.pubHistoryList.indexOf(pubItem),1);
+
+
   }
 }
