@@ -33,8 +33,11 @@ testem.log
 .DS_Store
 Thumbs.db
 
-
+#server files
 /.bundle
+
+/server/.idea
+/server/config/database.yml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
