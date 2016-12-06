@@ -1,3 +1,3 @@
 class SequenceSerializer < ActiveModel::Serializer
-  attributes :id, :seq, :seqID, :name
+  attributes :id, :seqID, :name
 end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sequenceSequence: 1
+  seq: 1
+  shotID: MyString
+  name: MyString
+
+two:
+  sequenceSequence: 1
+  seq: 1
+  shotID: MyString
+  name: MyString

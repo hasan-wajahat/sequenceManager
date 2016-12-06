@@ -27,5 +27,10 @@ export class SeqService {
 }
 
 function  mapJson(jsonData: any){
-  return jsonData.attributes;
+  let returnSequence = <Sequence>({
+    id: jsonData.id,
+    seqID: jsonData.attributes.seqID,
+    name: jsonData.attributes.name
+  });
+  return returnSequence;
 }

@@ -21,3 +21,75 @@ Sequence.create([{
                      seqID: 'sq003',
                      name: 'sq003'
                  }])
+
+Short.create([
+
+                 {
+                     sequenceSequence: 40,
+                     seq: 471,
+                     shotID: "sq001_S001",
+                     shotName: "RABcontactTUT"
+                 },
+                 {
+                     sequenceSequence: 40,
+                     seq: 473,
+                     shotID: "sq001_S003",
+                     shotName: "TUTsurprise"
+                 },
+                 {
+                     sequenceSequence: 40,
+                     seq: 472,
+                     shotID: "sq001_S002",
+                     shotName: "RABtalk"
+                 },
+                 {
+                     sequenceSequence: 40,
+                     seq: 504,
+                     shotID: "ShotIDIsLongVeryLong",
+                     shotName: "ShotIDIsLongVeryVeryLongReally"
+                 },
+                 {
+                     sequenceSequence: 41,
+                     seq: 534,
+                     shotID: "sq002_s003",
+                     shotName: "showtest"
+                 },
+                 {
+                     sequenceSequence: 41,
+                     seq: 535,
+                     shotID: "sq002_s004",
+                     shotName: "showtest2"
+                 },
+                 {
+                     sequenceSequence: 41,
+                     seq: 546,
+                     shotID: "shot09",
+                     shotName: "shot09"
+                 },
+                 {
+                     sequenceSequence: 41,
+                     seq: 474,
+                     shotID: "sq002_S001",
+                     shotName: "TUTcry"
+                 },
+                 {
+                     sequenceSequence: 41,
+                     seq: 475,
+                     shotID: "sq002_S002",
+                     shotName: "SHOidea"
+                 },
+                 {
+                     sequenceSequence: 41,
+                     seq: 545,
+                     shotID: "shot08",
+                     shotName: "shot08"
+                 },
+                 {
+                     sequenceSequence: 41,
+                     seq: 544,
+                     shotID: "shot07",
+                     shotName: "shot07"
+                 }
+
+
+             ])

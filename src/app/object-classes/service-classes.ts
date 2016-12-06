@@ -8,7 +8,7 @@ export class PublishHistoryList {
 }
 
 export class Sequence {
-  constructor(public seq: number,
+  constructor(public id: number,
               public seqID: string,
               public name: string) {
   }

@@ -36,8 +36,8 @@ export class SideBarComponent implements OnInit {
     this.sequenceDisplay = [];
     var str = "";
     for (let singleSeq of this.sequence) {
-      str += singleSeq.seq.toString() + ",";
-      this.sequenceDisplay[singleSeq.seq] = true;
+      str += singleSeq.id.toString() + ",";
+      this.sequenceDisplay[singleSeq.id] = true;
     }
     str = str.slice(0, -1);
     this.shortService.getShort(str).subscribe(
