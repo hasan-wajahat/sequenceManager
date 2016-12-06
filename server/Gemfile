@@ -38,3 +38,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #json serializer gem
 gem 'active_model_serializers', '~> 0.10.0'
+
+#for CORS activation
+
+gem 'rack-cors', :require => 'rack/cors'

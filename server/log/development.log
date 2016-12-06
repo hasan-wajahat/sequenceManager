@@ -405,3 +405,301 @@ Processing by SequencesController#index as HTML
 Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/sequences/1" for ::1 at 2016-12-06 00:13:59 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SequencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers] Rendered SequenceSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.14ms)
+Completed 200 OK in 18ms (Views: 5.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 01:30:28 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.64ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 01:44:49 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.71ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 02:00:42 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.19ms)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 02:00:55 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.01ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 11:41:27 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (23.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (10.63ms)
+Completed 200 OK in 51ms (Views: 24.6ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 11:45:11 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.06ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 11:50:17 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.53ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:01:16 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.34ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:01:37 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.27ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:02:07 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.34ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:06:05 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.79ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:07:18 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.04ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:07:47 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.29ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:08:12 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.35ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:10:13 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.35ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:10:30 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.64ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:11:04 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.66ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:12:11 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.16ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:12:48 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.48ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:14:00 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.16ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:14:30 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.37ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:16:28 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.37ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:17:02 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.6ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.23ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:18:04 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.12ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:18:18 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.64ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:20:49 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.8ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:21:02 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.12ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:21:23 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.03ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:23:15 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.45ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:24:09 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.36ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:24:37 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.21ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:24:52 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.72ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:25:35 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.6ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.61ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:26:30 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.88ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:27:44 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.93ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-06 12:27:47 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.46ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+

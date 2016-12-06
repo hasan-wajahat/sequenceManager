@@ -7,8 +7,9 @@ import {Sequence} from '../object-classes/service-classes';
 
 @Injectable()
 export class SeqService {
-  private url = '../assets/sequenceList.json';
+  // private url = '../assets/sequenceList.json';
   // private url = 'whyu0001.php';
+  private url = 'http://localhost:3000/sequences';
 
   constructor(private http: Http) {
   }
@@ -21,7 +22,10 @@ export class SeqService {
   }
 
   private extractData(res: Response) {
-    let body = res.json();
-    return body;
+    return res.json().data.map(mapJson);
   }
+}
+
+function  mapJson(jsonData: any){
+  return jsonData.attributes;
 }

@@ -9,7 +9,7 @@ export class PublishHistoryList {
 
 export class Sequence {
   constructor(public seq: number,
-              public id: string,
+              public seqID: string,
               public name: string) {
   }
 }
