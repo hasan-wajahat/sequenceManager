@@ -34,15 +34,14 @@ export class SideBarComponent implements OnInit {
   getShort(seq: Sequence[]) {
     this.sequence = seq;
     this.sequenceDisplay = [];
-    var str = "";
+    this.short = [];
     for (let singleSeq of this.sequence) {
-      str += singleSeq.id.toString() + ",";
+      var str = singleSeq.id.toString();
+      this.shortService.getShort(str).subscribe(
+        short => {this.short = this.short.concat(short);}
+      );
       this.sequenceDisplay[singleSeq.id] = true;
     }
-    str = str.slice(0, -1);
-    this.shortService.getShort(str).subscribe(
-      short => this.short = short
-    );
   }
 
   toggleDisplay(seq: number) {
@@ -52,6 +51,10 @@ export class SideBarComponent implements OnInit {
   goToShortDetail(short: string) {
     let link = ['/short', short];
     this.router.navigate(link);
+  }
+
+  test(){
+   console.log(this.short);
   }
 
 }

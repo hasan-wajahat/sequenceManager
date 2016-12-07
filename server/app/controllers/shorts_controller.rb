@@ -3,7 +3,7 @@ class ShortsController < ApplicationController
 
   # GET /shorts
   def index
-    @shorts = Short.all
+    @shorts = Sequence.find(params[:sequence_id]).shorts
 
     render json: @shorts
   end
@@ -46,6 +46,6 @@ class ShortsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def short_params
-      params.require(:short).permit(:sequenceSequence, :seq, :shotID, :shotName)
+      params.require(:short).permit(:sequence_id, :seq, :shotID, :shotName)
     end
 end

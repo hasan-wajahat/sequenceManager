@@ -1,11 +1,11 @@
 <div *ngFor="let seq of sequence">
-  <div (click)="toggleDisplay(seq.seq)">
+  <div (click)="toggleDisplay(seq.id)" class="sequenceDiv">
     {{seq.name}}
   </div>
-  <div *ngFor="let seqno of short" class="listItems">
-    <ul *ngIf="seq.seq == seqno.sequenceSequence && sequenceDisplay[seq.seq]">
-      <li *ngFor="let shrt of seqno.shorts" (click)="goToShortDetail(shrt.seq)">
-        {{shrt.shotName}}
+  <div *ngFor="let shortItem of short" class="listItems">
+    <ul *ngIf="seq.id == shortItem.seqID && sequenceDisplay[seq.id]">
+      <li (click)="goToShortDetail(shortItem.id)">
+        {{shortItem.shotName}}
       </li>
     </ul>
   </div>

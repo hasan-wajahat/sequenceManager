@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response, URLSearchParams} from '@angular/http';
+import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {Short} from '../object-classes/service-classes';
@@ -7,21 +7,28 @@ import {Short} from '../object-classes/service-classes';
 
 @Injectable()
 export class ShortService {
-  private url = '../assets/shotList.json';
-  // private url = '../angularAPI/ShotList.php';
 
   constructor(private http: Http) {
   }
 
   getShort(seq: string): Observable<Short[]> {
-    let params = new URLSearchParams();
-    params.set('ProjID', 'RNT');
-    params.set('Seq', seq);
-    return this.http.get(this.url, {search: params}).map(this.extractData);
+    var url = 'http://localhost:3000/sequences/' + seq + '/shorts';
+    return this.http.get(url).map(this.extractData);
   }
 
   private extractData(res: Response) {
-    let body = res.json();
-    return body.data;
+    return res.json().data.map(mapJson);
   }
 }
+
+function  mapJson(jsonData: any) {
+  let returnShort = <Short>({
+    id: jsonData.id,
+    shotID: jsonData.attributes['shot-id'],
+    shotName: jsonData.attributes['shot-name'],
+    seqID: jsonData.relationships.sequence.data.id
+  });
+  return returnShort;
+}
+
+//TODO: we have to adjust it according to sequence_id

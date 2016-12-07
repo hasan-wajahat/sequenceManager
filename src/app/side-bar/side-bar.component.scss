@@ -1,10 +1,8 @@
-$blackBackground: #262626;
-$textColor: #ff5546;
-
-p {
-  color: aqua;
-}
-
 .listItems{
   word-wrap: break-word;
+  cursor: pointer;
+}
+
+.sequenceDiv{
+  cursor: pointer;
 }

@@ -1121,3 +1121,1914 @@ Processing by SequencesController#index as */*
 Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3549556247466369735', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeSequenceToId (20161206204739)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('3549556247466369735')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('3549556247466369735', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeSequenceToId (20161206204739)
+  [1m[35m (17.7ms)[0m  [1m[35mALTER TABLE `shorts` CHANGE `sequenceSequence` `sequence_id` int(11)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161206204739')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('3549556247466369735')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `sequences`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'sequences'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `shorts`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'shorts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'sequenceManager'
+  AND fk.table_name = 'sequences'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'sequenceManager'
+  AND fk.table_name = 'shorts'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3549556247466369735', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeleteSequenceFromShorts (20161206205121)
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE `sequences` DROP `seq`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3549556247466369735')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3549556247466369735', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeleteSequenceFromShorts (20161206205121)
+  [1m[35m (43.8ms)[0m  [1m[35mALTER TABLE `shorts` DROP `seq`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161206205121')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('3549556247466369735')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `sequences`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'sequences'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `shorts`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'shorts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'sequenceManager'
+  AND fk.table_name = 'sequences'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'sequenceManager'
+  AND fk.table_name = 'shorts'
+[0m
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 10:57:52 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.9ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 10:57:55 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.56ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 10:58:09 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.58ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences" for ::1 at 2016-12-07 12:03:02 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SequencesController#index as HTML
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.94ms)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shorts" for ::1 at 2016-12-07 12:03:09 +0500
+Processing by ShortsController#index as HTML
+  [1m[36mShort Load (0.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.14ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `sequenceSequence' for #<Short:0x007fe76eee4438>
+Did you mean?  sequence=):
+  
+app/controllers/shorts_controller.rb:8:in `index'
+Started GET "/shorts" for ::1 at 2016-12-07 12:04:32 +0500
+Processing by ShortsController#index as HTML
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (12.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `seq' for #<Short:0x007fe76dea3998>
+Did you mean?  send):
+  
+app/controllers/shorts_controller.rb:8:in `index'
+Started GET "/shorts" for ::1 at 2016-12-07 12:04:58 +0500
+Processing by ShortsController#index as HTML
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.32ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shorts" for ::1 at 2016-12-07 12:07:11 +0500
+Processing by ShortsController#index as HTML
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (43.83ms)
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shorts" for ::1 at 2016-12-07 12:07:23 +0500
+Processing by ShortsController#index as HTML
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (16.34ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shorts/1" for ::1 at 2016-12-07 12:10:57 +0500
+Processing by ShortsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShort Load (0.5ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers] Rendered ShortSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.94ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sequences/1" for ::1 at 2016-12-07 12:13:34 +0500
+Processing by SequencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered SequenceSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.92ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sequences/1" for ::1 at 2016-12-07 12:13:43 +0500
+Processing by SequencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered SequenceSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.58ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sequences/" for ::1 at 2016-12-07 14:18:45 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SequencesController#index as HTML
+  [1m[36mSequence Load (0.6ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers]   [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (36.08ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/sequences/" for ::1 at 2016-12-07 15:51:51 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/sequences"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/shorts" for ::1 at 2016-12-07 15:53:55 +0500
+Processing by ShortsController#index as HTML
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (29.34ms)
+Completed 200 OK in 43ms (Views: 36.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/sequences" for ::1 at 2016-12-07 15:55:01 +0500
+Processing by SequencesController#index as HTML
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers]   [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (18.84ms)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 15:55:10 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (28.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 15:56:18 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (16.18ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 15:58:01 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (14.69ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 16:00:30 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.87ms)
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/shorts" for ::1 at 2016-12-07 16:02:05 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/shorts"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/sequences/1" for ::1 at 2016-12-07 16:49:55 +0500
+Processing by SequencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers] Rendered SequenceSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.72ms)
+Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 16:49:59 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.65ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 16:56:35 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mShort Load (0.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.57ms)
+Completed 200 OK in 25ms (Views: 18.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 16:56:36 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.87ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 16:56:40 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.07ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 16:57:01 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.31ms)
+Completed 200 OK in 38ms (Views: 12.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 17:03:31 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.06ms)
+Completed 200 OK in 24ms (Views: 10.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 17:03:50 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.3ms)
+Completed 200 OK in 25ms (Views: 10.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:26:05 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (15.5ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?ProjID=RNT&Seq=1,2,3" for ::1 at 2016-12-07 17:26:05 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"ProjID"=>"RNT", "Seq"=>"1,2,3"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.59ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:26:17 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.18ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?ProjID=RNT&Seq=1,2,3" for ::1 at 2016-12-07 17:26:17 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"ProjID"=>"RNT", "Seq"=>"1,2,3"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.22ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:28:04 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.45ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sequences?ProjID=RNT&Seq=1,2,3" for ::1 at 2016-12-07 17:28:04 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"ProjID"=>"RNT", "Seq"=>"1,2,3"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.63ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:30:15 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.23ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences" for ::1 at 2016-12-07 17:30:15 +0500
+Processing by SequencesController#index as */*
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.07ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:37:22 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.01ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences?ProjID=RNT&Seq=1,2,3" for ::1 at 2016-12-07 17:37:22 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"ProjID"=>"RNT", "Seq"=>"1,2,3"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.46ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:40:19 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.46ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?ProjID=RNT&Seq=1,2,3" for ::1 at 2016-12-07 17:40:19 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"ProjID"=>"RNT", "Seq"=>"1,2,3"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.47ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:41:24 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.94ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?ProjID=RNT&Seq=1,2,3" for ::1 at 2016-12-07 17:41:24 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"ProjID"=>"RNT", "Seq"=>"1,2,3"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.9ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:44:17 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.74ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences1" for ::1 at 2016-12-07 17:44:17 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/sequences1"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+Started GET "/sequences123" for ::1 at 2016-12-07 17:44:17 +0500
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+  
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+ActionController::RoutingError (No route matches [GET] "/sequences123"):
+Started GET "/sequences12" for ::1 at 2016-12-07 17:44:17 +0500
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  
+  
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+ActionController::RoutingError (No route matches [GET] "/sequences12"):
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:46:53 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.85ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1shorts" for ::1 at 2016-12-07 17:46:53 +0500
+Processing by SequencesController#show as */*
+  Parameters: {"id"=>"1shorts"}
+Started GET "/sequences/1shorts2shorts" for ::1 at 2016-12-07 17:46:53 +0500
+  [1m[36mSequence Load (1.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/1shorts2shorts3shorts" for ::1 at 2016-12-07 17:46:53 +0500
+Processing by SequencesController#show as */*
+[active_model_serializers] Rendered SequenceSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.23ms)
+Processing by SequencesController#show as */*
+  Parameters: {"id"=>"1shorts2shorts"}
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.9ms)
+
+
+  Parameters: {"id"=>"1shorts2shorts3shorts"}
+  [1m[36mSequence Load (0.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers] Rendered SequenceSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.61ms)
+  [1m[36mSequence Load (3.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.9ms)
+
+
+[active_model_serializers] Rendered SequenceSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.19ms)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:48:14 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.82ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 17:48:14 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.6ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.09ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sequences/1/shorts2/shorts" for ::1 at 2016-12-07 17:48:14 +0500
+Started GET "/sequences/1/shorts2/shorts3/shorts" for ::1 at 2016-12-07 17:48:14 +0500
+  
+  
+ActionController::RoutingError (No route matches [GET] "/sequences/1/shorts2/shorts"):
+ActionController::RoutingError (No route matches [GET] "/sequences/1/shorts2/shorts3/shorts"):
+  
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:49:49 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.4ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:49:54 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.95ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 17:49:54 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 17:49:54 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 17:49:54 +0500
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (4.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (1.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (2.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.5ms)
+  [1m[36mSequence Load (11.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 10.8ms | ActiveRecord: 7.5ms)
+
+
+  [1m[36mShort Load (13.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (2.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.08ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.01ms)
+Completed 200 OK in 33ms (Views: 12.8ms | ActiveRecord: 15.8ms)
+
+
+Completed 200 OK in 29ms (Views: 11.7ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:53:34 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.11ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 17:53:34 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 17:53:34 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 17:53:34 +0500
+  [1m[36mSequence Load (1.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (1.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (0.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.76ms)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mShort Load (3.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (3.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.25ms)
+Completed 200 OK in 17ms (Views: 3.8ms | ActiveRecord: 3.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.81ms)
+Completed 200 OK in 23ms (Views: 11.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:54:00 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.34ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 17:54:00 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 17:54:00 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 17:54:00 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (2.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"2"}
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (0.6ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.24ms)
+  [1m[36mSequence Load (8.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 3.5ms)
+
+
+  [1m[36mShort Load (2.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (2.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.61ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.3ms)
+Completed 200 OK in 22ms (Views: 11.8ms | ActiveRecord: 2.8ms)
+
+
+Completed 200 OK in 22ms (Views: 10.0ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 17:57:32 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (13.12ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 17:57:32 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 17:57:32 +0500
+  [1m[36mSequence Load (1.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 17:57:32 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (1.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (2.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.45ms)
+  [1m[36mSequence Load (3.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mShort Load (2.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (1.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.96ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.07ms)
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 5.1ms)
+
+
+Completed 200 OK in 19ms (Views: 10.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:00:31 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.56ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:00:31 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:00:31 +0500
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (1.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"2"}
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:00:31 +0500
+Processing by ShortsController#index as */*
+  [1m[36mShort Load (1.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (1.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.57ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mSequence Load (1.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (2.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (1.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.31ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.0ms)
+Completed 200 OK in 19ms (Views: 10.4ms | ActiveRecord: 4.1ms)
+
+
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:03:28 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.58ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:03:28 +0500
+Processing by ShortsController#index as */*
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:03:28 +0500
+  Parameters: {"sequence_id"=>"1"}
+Processing by ShortsController#index as */*
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:03:28 +0500
+  Parameters: {"sequence_id"=>"2"}
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (2.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (2.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (2.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mShort Load (1.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mSequence Load (3.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.44ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.25ms)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 4.4ms)
+
+
+  [1m[36mShort Load (0.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 3.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.83ms)
+Completed 200 OK in 20ms (Views: 5.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:04:38 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.19ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:04:38 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:04:38 +0500
+Processing by ShortsController#index as */*
+  [1m[36mShort Load (3.1ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:04:38 +0500
+Processing by ShortsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.82ms)
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (7.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 3.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.39ms)
+  [1m[36mSequence Load (6.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 7.8ms)
+
+
+  [1m[36mShort Load (0.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.15ms)
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:05:22 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.55ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:05:22 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.44ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:05:22 +0500
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:05:22 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mSequence Load (0.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mSequence Load (1.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (1.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+  [1m[36mShort Load (1.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.28ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.39ms)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 2.6ms)
+
+
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:09:10 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.69ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:09:10 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:09:10 +0500
+Processing by ShortsController#index as */*
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:09:10 +0500
+  [1m[36mShort Load (2.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  Parameters: {"sequence_id"=>"2"}
+Processing by ShortsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.01ms)
+  Parameters: {"sequence_id"=>"3"}
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mSequence Load (0.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (2.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (2.1ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.71ms)
+  [1m[36mShort Load (6.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 3.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.88ms)
+Completed 200 OK in 15ms (Views: 4.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:09:17 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.44ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:09:17 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:09:17 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mSequence Load (2.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:09:17 +0500
+Processing by ShortsController#index as */*
+  [1m[36mShort Load (1.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (4.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"3"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.81ms)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 4.0ms)
+
+
+  [1m[36mShort Load (1.1ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mSequence Load (1.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.39ms)
+Completed 200 OK in 21ms (Views: 8.6ms | ActiveRecord: 5.3ms)
+
+
+  [1m[36mShort Load (0.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.97ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:12:25 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.2ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:12:25 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:12:25 +0500
+  [1m[36mShort Load (0.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:12:25 +0500
+Processing by ShortsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.83ms)
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 1.3ms)
+
+
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mSequence Load (1.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mSequence Load (2.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (2.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.17ms)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mShort Load (4.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.33ms)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:13:47 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.1ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:13:47 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:13:47 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (1.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:13:47 +0500
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (2.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.51ms)
+  Parameters: {"sequence_id"=>"3"}
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mShort Load (0.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mSequence Load (1.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.88ms)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mShort Load (0.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.14ms)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:14:08 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.97ms)
+Completed 200 OK in 37ms (Views: 21.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:16:14 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.54ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:16:14 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:16:14 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:16:14 +0500
+  [1m[36mShort Load (2.1ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Processing by ShortsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.2ms)
+  [1m[36mSequence Load (8.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"3"}
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mShort Load (0.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mSequence Load (1.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.31ms)
+Completed 200 OK in 24ms (Views: 11.7ms | ActiveRecord: 9.2ms)
+
+
+  [1m[36mShort Load (0.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.5ms)
+Completed 200 OK in 15ms (Views: 4.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:16:23 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.88ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:17:21 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.44ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:17:21 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:17:21 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:17:21 +0500
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.15ms)
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 1.1ms)
+
+
+  Parameters: {"sequence_id"=>"2"}
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (2.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.64ms)
+  [1m[36mShort Load (5.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.49ms)
+Completed 200 OK in 15ms (Views: 5.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:17:51 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.25ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:17:51 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:17:51 +0500
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (2.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"2"}
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:17:51 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (1.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.34ms)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 4.1ms)
+
+
+  [1m[36mSequence Load (9.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (10.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (2.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.11ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.27ms)
+Completed 200 OK in 25ms (Views: 11.8ms | ActiveRecord: 11.9ms)
+
+
+Completed 200 OK in 24ms (Views: 11.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:20:07 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:20:08 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:20:08 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (2.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:20:08 +0500
+Processing by ShortsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.84ms)
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (8.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mShort Load (0.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.85ms)
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 9.1ms)
+
+
+  [1m[36mSequence Load (11.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.8ms)
+Completed 200 OK in 18ms (Views: 4.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:20:11 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.61ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:20:11 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:20:11 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:20:11 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (2.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  Parameters: {"sequence_id"=>"3"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.2ms)
+  [1m[36mSequence Load (7.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 3.3ms)
+
+
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (2.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.11ms)
+  [1m[36mShort Load (8.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+Completed 200 OK in 23ms (Views: 9.8ms | ActiveRecord: 10.2ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.37ms)
+Completed 200 OK in 20ms (Views: 6.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:20:27 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.29ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:20:27 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:20:27 +0500
+  [1m[36mSequence Load (0.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Processing by ShortsController#index as */*
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:20:27 +0500
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (0.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (1.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.14ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mSequence Load (3.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (3.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.12ms)
+Completed 200 OK in 23ms (Views: 9.8ms | ActiveRecord: 4.5ms)
+
+
+  [1m[36mShort Load (9.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.35ms)
+Completed 200 OK in 21ms (Views: 6.3ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:21:01 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.09ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:21:01 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:21:01 +0500
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:21:01 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  [1m[36mShort Load (2.6ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  Parameters: {"sequence_id"=>"2"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.94ms)
+  [1m[36mSequence Load (5.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 3.3ms)
+
+
+  [1m[36mSequence Load (2.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (0.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.7ms)
+  [1m[36mShort Load (4.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+Completed 200 OK in 16ms (Views: 7.6ms | ActiveRecord: 6.2ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.29ms)
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:21:22 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.07ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:21:22 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (1.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:21:22 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:21:22 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (2.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.38ms)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 3.1ms)
+
+
+  [1m[36mSequence Load (6.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (5.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (1.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (1.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (8.25ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.95ms)
+Completed 200 OK in 24ms (Views: 14.3ms | ActiveRecord: 8.2ms)
+
+
+Completed 200 OK in 23ms (Views: 13.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:23:23 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.44ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:23:23 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:23:23 +0500
+  [1m[36mSequence Load (1.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Processing by ShortsController#index as */*
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:23:23 +0500
+  Parameters: {"sequence_id"=>"2"}
+Processing by ShortsController#index as */*
+  [1m[36mShort Load (2.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.55ms)
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mShort Load (1.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mSequence Load (2.9ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.07ms)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mShort Load (8.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.96ms)
+Completed 200 OK in 18ms (Views: 4.8ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:24:35 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.41ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:24:35 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.85ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:24:35 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:24:35 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mSequence Load (2.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (1.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+  [1m[36mShort Load (0.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.09ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 2.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.65ms)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:24:42 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.8ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:24:42 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:24:42 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (1.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.29ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mSequence Load (8.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:24:42 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (1.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.08ms)
+  [1m[36mSequence Load (7.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 9.2ms | ActiveRecord: 9.6ms)
+
+
+  [1m[36mShort Load (0.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.46ms)
+Completed 200 OK in 14ms (Views: 4.4ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:26:24 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.8ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:26:24 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:26:24 +0500
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (2.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"3"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:26:24 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (1.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (2.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mSequence Load (3.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.4ms)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 4.2ms)
+
+
+  [1m[36mShort Load (5.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+  [1m[36mShort Load (1.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.41ms)
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 7.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.34ms)
+Completed 200 OK in 23ms (Views: 13.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:31:29 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.4ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.5ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:31:29 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:31:29 +0500
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:31:29 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (2.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mSequence Load (3.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mSequence Load (1.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (2.1ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mShort Load (1.5ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+  [1m[36mShort Load (0.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.54ms)
+Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 4.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.92ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.55ms)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 4.5ms)
+
+
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 18:32:41 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.25ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 18:32:41 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 18:32:41 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (1.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 18:32:41 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.42ms)
+  [1m[36mSequence Load (8.6ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mSequence Load (8.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (2.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (0.6ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.66ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.71ms)
+Completed 200 OK in 26ms (Views: 12.9ms | ActiveRecord: 11.4ms)
+
+
+Completed 200 OK in 24ms (Views: 13.0ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 19:04:34 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.34ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:04:34 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:04:34 +0500
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 19:04:34 +0500
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (2.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (1.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (1.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mSequence Load (2.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (7.03ms)
+  [1m[36mShort Load (9.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 3.5ms)
+
+
+  [1m[36mShort Load (1.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.99ms)
+Completed 200 OK in 19ms (Views: 6.8ms | ActiveRecord: 10.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.35ms)
+Completed 200 OK in 26ms (Views: 13.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 19:04:57 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.69ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:04:57 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 19:04:57 +0500
+Processing by ShortsController#index as */*
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:04:57 +0500
+  Parameters: {"sequence_id"=>"2"}
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (2.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (4.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mShort Load (0.4ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.62ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mSequence Load (5.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (4.1ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.76ms)
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 8.8ms)
+
+
+  [1m[36mShort Load (4.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.74ms)
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 19:06:41 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.29ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:06:41 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 19:06:41 +0500
+Processing by ShortsController#index as */*
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:06:41 +0500
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mSequence Load (1.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (3.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (1.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (2.6ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mShort Load (1.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (1.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.85ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.34ms)
+Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 4.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.33ms)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 28ms (Views: 21.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 19:07:08 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.37ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:07:08 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 19:07:08 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:07:08 +0500
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (1.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (1.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (0.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (1.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.69ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mShort Load (2.1ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (0.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.58ms)
+Completed 200 OK in 15ms (Views: 4.1ms | ActiveRecord: 2.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.5ms)
+Completed 200 OK in 20ms (Views: 9.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 19:07:18 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.34ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:07:18 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (1.4ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 19:07:18 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  [1m[36mShort Load (1.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:07:18 +0500
+  [1m[36mSequence Load (1.1ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+Processing by ShortsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.4ms)
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 2.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.19ms)
+  [1m[36mSequence Load (4.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mShort Load (0.7ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.03ms)
+Completed 200 OK in 11ms (Views: 4.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 19:07:38 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.51ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:07:38 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 19:07:38 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:07:38 +0500
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Processing by ShortsController#index as */*
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (0.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (0.8ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (2.7ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.62ms)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mShort Load (7.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (6.0ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (5.62ms)
+Completed 200 OK in 19ms (Views: 8.2ms | ActiveRecord: 8.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.96ms)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/sequences?Mode=GetSequenceListByProjID&ProjID=RNT" for ::1 at 2016-12-07 19:08:12 +0500
+Processing by SequencesController#index as */*
+  Parameters: {"Mode"=>"GetSequenceListByProjID", "ProjID"=>"RNT"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT `sequences`.* FROM `sequences`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.67ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:08:12 +0500
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"1"}
+Started GET "/sequences/2/shorts" for ::1 at 2016-12-07 19:08:12 +0500
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:08:12 +0500
+Processing by ShortsController#index as */*
+  [1m[36mSequence Load (1.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+Processing by ShortsController#index as */*
+  Parameters: {"sequence_id"=>"2"}
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mShort Load (0.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+  [1m[36mSequence Load (0.5ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 2 LIMIT 1[0m
+  [1m[36mSequence Load (1.0ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.36ms)
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mShort Load (1.9ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 2[0m
+  [1m[36mShort Load (0.8ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.13ms)
+Completed 200 OK in 18ms (Views: 9.7ms | ActiveRecord: 2.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (2.52ms)
+Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 1.8ms)
+
+

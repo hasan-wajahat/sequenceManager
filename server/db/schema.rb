@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206102014) do
+ActiveRecord::Schema.define(version: 20161206205121) do
 
   create_table "sequences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "seqID"
@@ -20,12 +20,11 @@ ActiveRecord::Schema.define(version: 20161206102014) do
   end
 
   create_table "shorts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer  "sequenceSequence"
-    t.integer  "seq"
+    t.integer  "sequence_id"
     t.string   "shotID"
     t.string   "shotName"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

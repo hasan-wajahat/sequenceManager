@@ -13,14 +13,10 @@ export class Sequence {
               public name: string) {
   }
 }
-class nestedShort {
-  constructor(public seq: number,
-              public shotID: string,
-              public shotName: string) {
-  }
-}
 export class Short {
-  constructor(public sequenceSequence: number,
-              public shorts: nestedShort) {
+  constructor(public id: number,
+              public shotID: string,
+              public shotName: string,
+              public seqID: number) {
   }
 }
