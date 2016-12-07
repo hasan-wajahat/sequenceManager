@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
-import {Http, Response, URLSearchParams} from '@angular/http';
+import {Http, Response, URLSearchParams, Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {PublishHistoryList} from '../object-classes/service-classes';
+import {PublishItem} from '../object-classes/publish-item';
 
 @Injectable()
 export class PublishHistoryService {
@@ -21,9 +22,18 @@ export class PublishHistoryService {
   private extractData(res: Response) {
     return res.json().data.map(mapJson);
   }
+
+  postPublishItem(publishItem: PublishItem) {
+    var url = 'http://localhost:3000/shorts/1/publish_histories';
+    var headers = new Headers();
+    var status;
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(url, JSON.stringify(publishItem), {headers: headers});
+  }
+
 }
 
-function  mapJson(jsonData: any) {
+function mapJson(jsonData: any) {
   let returnPublishHistory = <PublishHistoryList>({
     id: jsonData.id,
     taskType: jsonData.attributes.tasktype,

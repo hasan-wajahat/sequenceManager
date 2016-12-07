@@ -31,4 +31,3 @@ function  mapJson(jsonData: any) {
   return returnShort;
 }
 
-//TODO: we have to adjust it according to sequence_id

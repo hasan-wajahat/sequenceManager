@@ -2,14 +2,9 @@
   <h1>New Item</h1>
   <form #myForm = "ngForm" (ngSubmit) = "onSubmit();">
     <div class="form-group">
-      <label for="id">ID</label>
-      <input type="number" disabled id = "id" class="form-control"
-             [(ngModel)]="publishItem.id" name="id">
-    </div>
-    <div class="form-group">
       <label for="taskType">Task Type</label>
-      <input type="text" id = "taskType" class="form-control"
-             required [(ngModel)]="publishItem.taskType" name="tasktype">
+      <input type="number" id = "taskType" class="form-control"
+             required [(ngModel)]="publishItem.tasktype" name="tasktype">
     </div>
     <div class="form-group">
       <label for="publisher">Publisher</label>

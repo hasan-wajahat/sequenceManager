@@ -53,8 +53,5 @@ export class SideBarComponent implements OnInit {
     this.router.navigate(link);
   }
 
-  test(){
-   console.log(this.short);
-  }
 
 }

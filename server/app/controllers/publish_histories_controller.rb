@@ -18,7 +18,7 @@ class PublishHistoriesController < ApplicationController
     @publish_history = PublishHistory.new(publish_history_params)
 
     if @publish_history.save
-      render json: @publish_history, status: :created, location: @publish_history
+      render json: [status: :created], status: :created, location: @publish_history
     else
       render json: @publish_history.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class PublishHistoriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def publish_history_params
-      params.require(:publish_history).permit(:short, :tasktype, :publisher, :image, :comment)
+      params.require(:publish_history).permit(:tasktype, :publisher, :image, :comment, :id, :short_id)
     end
 end

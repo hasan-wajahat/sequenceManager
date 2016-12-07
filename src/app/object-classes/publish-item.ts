@@ -1,8 +1,8 @@
 export class PublishItem{
   constructor(
     public id: number,
-    public taskType: number,
-    public shotID: number,
+    public tasktype: number,
+    public short_id: number,
     public publisher: string,
     public image?: string,
     public comment?: string
