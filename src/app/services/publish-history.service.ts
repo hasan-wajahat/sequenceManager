@@ -7,30 +7,29 @@ import {PublishHistoryList} from '../object-classes/service-classes';
 @Injectable()
 export class PublishHistoryService {
 
-  private url = '../assets/publishList.json';
+  // private url = '../assets/publishList.json';
   // private url = '../angularAPI/PublishHistory.php';
 
   constructor(private http: Http) {
   }
 
   getPubList(shortSeq: string): Observable<PublishHistoryList[]> {
-    let params = new URLSearchParams();
-    params.set('shortSeq', shortSeq);
-    return this.http.get(this.url, {search: params}).map(this.extractData);
+    var url = 'http://localhost:3000/shorts/' + shortSeq + '/publish_histories';
+    return this.http.get(url).map(this.extractData);
   }
 
   private extractData(res: Response) {
-    let body = res.json();
-    let empty = [{verNo: "empty", tskType: "empty", publisher: "empty",pbDate: "empty", pbCmt: "empty"}];
-    if (body.data == 'Unexpected query result') {
-      return empty;
-    } else {
-      return body.data;
-    }
+    return res.json().data.map(mapJson);
   }
+}
 
-
-
- 
-
+function  mapJson(jsonData: any) {
+  let returnPublishHistory = <PublishHistoryList>({
+    id: jsonData.id,
+    taskType: jsonData.attributes.tasktype,
+    publisher: jsonData.attributes.publisher,
+    image: jsonData.attributes.image,
+    comment: jsonData.attributes.comment,
+  });
+  return returnPublishHistory;
 }
