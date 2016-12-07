@@ -46,6 +46,5 @@ Thumbs.db
 # Ignore all logfiles and tempfiles.
 /server/log/*
 /server/tmp/*
-/server/log/development.log
 !/log/.keep
 !/tmp/.keep
