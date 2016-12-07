@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  short: 
+  tasktype: 
+  publisher: MyString
+  image: MyString
+  comment: MyString
+
+two:
+  short: 
+  tasktype: 
+  publisher: MyString
+  image: MyString
+  comment: MyString

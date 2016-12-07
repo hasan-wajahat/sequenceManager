@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206205121) do
+ActiveRecord::Schema.define(version: 20161207142911) do
+
+  create_table "publish_histories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer  "short_id"
+    t.integer  "tasktype"
+    t.string   "publisher"
+    t.string   "image"
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["short_id"], name: "index_publish_histories_on_short_id", using: :btree
+  end
 
   create_table "sequences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "seqID"

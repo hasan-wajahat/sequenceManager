@@ -3032,3 +3032,387 @@ Completed 200 OK in 18ms (Views: 9.7ms | ActiveRecord: 2.4ms)
 Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 1.8ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3549556247466369735', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePublishHistories (20161207142911)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3549556247466369735')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3549556247466369735', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePublishHistories (20161207142911)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3549556247466369735')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3549556247466369735', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePublishHistories (20161207142911)
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE `publish_histories` (`id` int AUTO_INCREMENT PRIMARY KEY, `short_id` int, `tasktype` int, `publisher` varchar(255), `image` varchar(255), `comment` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_publish_histories_on_short_id`  (`short_id`)) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20161207142911')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('3549556247466369735')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `publish_histories`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'publish_histories'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `sequences`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'sequences'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `shorts`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'shorts'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'sequenceManager'
+  AND fk.table_name = 'publish_histories'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'sequenceManager'
+  AND fk.table_name = 'sequences'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'sequenceManager'
+  AND fk.table_name = 'shorts'
+[0m
+Started GET "/sequences/1/shorts" for ::1 at 2016-12-07 19:44:32 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"1"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (6.39ms)
+Completed 200 OK in 45ms (Views: 18.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/sequences/3/shorts" for ::1 at 2016-12-07 19:44:51 +0500
+Processing by ShortsController#index as HTML
+  Parameters: {"sequence_id"=>"3"}
+  [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 3 LIMIT 1[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT `shorts`.* FROM `shorts` WHERE `shorts`.`sequence_id` = 3[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.83ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (1, 13, 'msoon', 'img1.png', 'test\n', '2016-12-07 15:27:32', '2016-12-07 15:27:32')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (1, 13, 'msoon', 'img1.png', 'test\n', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (1, 13, 'msoon', 'img1.png', 'test\n', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (1, 13, 'msoon', 'img1.png', '\nSq001_S001 / Animation task / maya2014', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (2, 14, 'msoon', 'img1.png', 'sq001_S001 / render task / maya2014', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.1ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (2, 13, 'msoon', 'img1.png', 'Sq001_S001 / Animation task / maya2014', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.1ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (2, 14, 'msoon', 'img1.png', '\nsq001_S001 / render task / maya2014', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (3, 14, 'msoon', 'img1.png', 'test localPub', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (4, 14, 'msoon', 'img1.png', 'test', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `comment`, `created_at`, `updated_at`) VALUES (4, 14, 'msoon', 'testing', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (4, 14, 'msoon', 'img1.png', 'test3', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (4, 14, 'msoon', 'img1.png', 'test', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (4, 14, 'msoon', 'img1.png', 'test55', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (4, 14, 'msoon', 'img1.png', 'test', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.1ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (5, 14, 'msoon', 'img1.png', 'testssssss', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (5, 14, 'msoon', 'img1.png', 'sssss', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `image`, `comment`, `created_at`, `updated_at`) VALUES (6, 14, 'msoon', 'img1.png', 'sfstf', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `comment`, `created_at`, `updated_at`) VALUES (7, 14, 'msoon', '', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 10 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `publish_histories` (`short_id`, `tasktype`, `publisher`, `comment`, `created_at`, `updated_at`) VALUES (10, 14, 'msoon', 're', '2016-12-07 15:29:46', '2016-12-07 15:29:46')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/shorts" for ::1 at 2016-12-07 20:32:41 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ShortsController#index as HTML
+  [1m[36mSequence Load (0.2ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Sequence with 'id'=):
+  
+app/controllers/shorts_controller.rb:6:in `index'
+Started GET "/shorts/1" for ::1 at 2016-12-07 20:32:57 +0500
+Processing by ShortsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mSequence Load (0.3ms)[0m  [1m[34mSELECT  `sequences`.* FROM `sequences` WHERE `sequences`.`id` = 1 LIMIT 1[0m
+[active_model_serializers] Rendered ShortSerializer with ActiveModel::Serializer::Adapter::JsonApi (14.06ms)
+Completed 200 OK in 29ms (Views: 19.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shorts/1/publish_histories" for ::1 at 2016-12-07 20:33:27 +0500
+Processing by PublishHistoriesController#index as HTML
+  Parameters: {"short_id"=>"1"}
+  [1m[36mPublishHistory Load (0.4ms)[0m  [1m[34mSELECT `publish_histories`.* FROM `publish_histories`[0m
+[active_model_serializers]   [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 3 LIMIT 1[0m
+[active_model_serializers]   [1m[36mShort Load (0.1ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 5 LIMIT 1[0m
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 6 LIMIT 1[0m
+[active_model_serializers]   [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 7 LIMIT 1[0m
+[active_model_serializers]   [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 10 LIMIT 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (27.64ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/shorts/1/publish_histories" for ::1 at 2016-12-07 20:34:34 +0500
+Processing by PublishHistoriesController#index as HTML
+  Parameters: {"short_id"=>"1"}
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[36mPublishHistory Load (2.9ms)[0m  [1m[34mSELECT `publish_histories`.* FROM `publish_histories` WHERE `publish_histories`.`short_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (3.02ms)
+Completed 200 OK in 34ms (Views: 11.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/shorts/1/publish_histories" for ::1 at 2016-12-07 20:34:48 +0500
+Processing by PublishHistoriesController#index as HTML
+  Parameters: {"short_id"=>"1"}
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 1 LIMIT 1[0m
+  [1m[36mPublishHistory Load (0.4ms)[0m  [1m[34mSELECT `publish_histories`.* FROM `publish_histories` WHERE `publish_histories`.`short_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (4.15ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shorts/7/publish_histories" for ::1 at 2016-12-07 20:35:06 +0500
+Processing by PublishHistoriesController#index as HTML
+  Parameters: {"short_id"=>"7"}
+  [1m[36mShort Load (0.3ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 7 LIMIT 1[0m
+  [1m[36mPublishHistory Load (0.3ms)[0m  [1m[34mSELECT `publish_histories`.* FROM `publish_histories` WHERE `publish_histories`.`short_id` = 7[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (1.35ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shorts/7/publish_histories" for ::1 at 2016-12-07 20:36:02 +0500
+Processing by PublishHistoriesController#index as HTML
+  Parameters: {"short_id"=>"7"}
+  [1m[36mShort Load (0.2ms)[0m  [1m[34mSELECT  `shorts`.* FROM `shorts` WHERE `shorts`.`id` = 7 LIMIT 1[0m
+  [1m[36mPublishHistory Load (0.2ms)[0m  [1m[34mSELECT `publish_histories`.* FROM `publish_histories` WHERE `publish_histories`.`short_id` = 7[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModel::Serializer::Adapter::JsonApi (0.98ms)
+Completed 200 OK in 26ms (Views: 10.7ms | ActiveRecord: 2.5ms)
+
+

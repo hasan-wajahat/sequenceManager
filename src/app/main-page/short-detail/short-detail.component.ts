@@ -15,31 +15,30 @@ export class ShortDetailComponent implements OnInit {
 
   id: string;
   pubHistoryList: PublishHistoryList[];
+
   constructor(private route: ActivatedRoute, private router: Router, private pubHistoryService: PublishHistoryService) {
-
-
-}
-
-
+  }
 
   ngOnInit() {
-     this.route.params.subscribe(params =>{
+    this.route.params.subscribe(params => {
 
-       this.id = params['short'];
-       this.pubHistoryService.getPubList(this.id).subscribe(item=>{this.pubHistoryList=item});
+      this.id = params['short'];
+      this.pubHistoryService.getPubList(this.id).subscribe(item=> {
+        this.pubHistoryList = item
+      });
     });
   }
 
-  goToUploadForm(){
+  goToUploadForm() {
     let link = ['/new-item', this.id];
     this.router.navigate(link);
   }
 
 
-  onDelete(pubItem: PublishHistoryList){
+  onDelete(pubItem: PublishHistoryList) {
 
     // this.pubHistoryList.indexOf(pubItem);
-    this.pubHistoryList.splice(this.pubHistoryList.indexOf(pubItem),1);
+    this.pubHistoryList.splice(this.pubHistoryList.indexOf(pubItem), 1);
 
 
   }
