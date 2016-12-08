@@ -38,6 +38,7 @@ Thumbs.db
 
 /server/.idea
 /server/config/database.yml
+/server/config/secrets.yml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
