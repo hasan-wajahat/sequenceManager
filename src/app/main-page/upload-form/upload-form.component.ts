@@ -42,7 +42,3 @@ export class UploadFormComponent implements OnInit {
   }
 
 }
-
-//TODO: First add a JWT Token production method on server.
-//TODO: make the some of the API's private and require token which is generated using login
-//TODO: limit access to upload-form component using guarded routes

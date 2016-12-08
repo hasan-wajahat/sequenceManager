@@ -17,11 +17,11 @@ export class AuthService{
     return this.http.post(this.server, credentials).map(
       res=>{
         let response = res.json();
-        if(response.auth_token){
+        if(response.status){
           localStorage.setItem('auth_token', response.auth_token);
           this.loggedIn = true;
         }
-        return response.auth_token? true:false;
+        return response.status
       }
     );
   }

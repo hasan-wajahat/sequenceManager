@@ -12,6 +12,7 @@ import {ShortDetailComponent} from './main-page/short-detail/short-detail.compon
 import {EmptyComponent} from './main-page/empty/empty.component';
 import { PublishItemComponent } from './main-page/short-detail/publish-item/publish-item.component';
 import { UploadFormComponent } from './main-page/upload-form/upload-form.component';
+import { LoginComponent } from './main-page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UploadFormComponent } from './main-page/upload-form/upload-form.compone
     ShortDetailComponent,
     EmptyComponent,
     PublishItemComponent,
-    UploadFormComponent
+    UploadFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
