@@ -21,7 +21,6 @@ export class ShortDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-
       this.id = params['short'];
       this.pubHistoryService.getPubList(this.id).subscribe(item=> {
         this.pubHistoryList = item
@@ -36,10 +35,10 @@ export class ShortDetailComponent implements OnInit {
 
 
   onDelete(pubItem: PublishHistoryList) {
-
-    // this.pubHistoryList.indexOf(pubItem);
     this.pubHistoryList.splice(this.pubHistoryList.indexOf(pubItem), 1);
-
+    this.pubHistoryService.deletePublishItem(this.id, pubItem.id).subscribe(
+      res => console.log(res)
+    );
 
   }
 }

@@ -10,12 +10,13 @@ export class PublishHistoryService {
 
   // private url = '../assets/publishList.json';
   // private url = '../angularAPI/PublishHistory.php';
+  private server = 'http://localhost:3000/shorts/';
 
   constructor(private http: Http) {
   }
 
   getPubList(shortSeq: string): Observable<PublishHistoryList[]> {
-    var url = 'http://localhost:3000/shorts/' + shortSeq + '/publish_histories';
+    var url = this.server + shortSeq + '/publish_histories';
     return this.http.get(url).map(this.extractData);
   }
 
@@ -23,12 +24,16 @@ export class PublishHistoryService {
     return res.json().data.map(mapJson);
   }
 
-  postPublishItem(publishItem: PublishItem) {
-    var url = 'http://localhost:3000/shorts/1/publish_histories';
+  postPublishItem(publishItem: PublishItem, id: number) {
+    var url = this.server + id.toString() + '/publish_histories';
     var headers = new Headers();
-    var status;
     headers.append('Content-Type', 'application/json');
     return this.http.post(url, JSON.stringify(publishItem), {headers: headers});
+  }
+
+  deletePublishItem(shortID: string, id: number) {
+    var url = this.server + shortID + '/publish_histories/' + id.toString();
+    return this.http.delete(url);
   }
 
 }

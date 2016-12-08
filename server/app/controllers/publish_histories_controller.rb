@@ -39,13 +39,13 @@ class PublishHistoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_publish_history
-      @publish_history = PublishHistory.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_publish_history
+    @publish_history = PublishHistory.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def publish_history_params
-      params.require(:publish_history).permit(:tasktype, :publisher, :image, :comment, :id, :short_id)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def publish_history_params
+    params.require(:publish_history).permit(:tasktype, :publisher, :image, :comment, :id, :short_id)
+  end
 end

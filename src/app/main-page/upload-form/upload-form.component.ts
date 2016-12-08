@@ -31,7 +31,7 @@ export class UploadFormComponent implements OnInit {
     if (file && file[0]) {
       this.publishItem.fileName = this.imgInput.nativeElement.files[0].name;
     }
-    this.publishHistoryService.postPublishItem(this.publishItem)
+    this.publishHistoryService.postPublishItem(this.publishItem, this.shotID)
       .subscribe(
         response=> {
           if (response.json()[0].status == 'created') {
