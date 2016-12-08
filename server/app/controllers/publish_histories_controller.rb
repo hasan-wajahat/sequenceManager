@@ -1,5 +1,6 @@
 class PublishHistoriesController < ApplicationController
   before_action :set_publish_history, only: [:show, :update, :destroy]
+  # before_filter :authenticate_request!
 
   # GET /publish_histories
   def index

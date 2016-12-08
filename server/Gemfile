@@ -42,3 +42,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 #for CORS activation
 
 gem 'rack-cors', :require => 'rack/cors'
+
+#for authorization
+
+gem 'devise'
+gem 'jwt'

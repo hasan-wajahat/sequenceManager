@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response, URLSearchParams} from '@angular/http';
+import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import {Sequence} from '../object-classes/service-classes';
@@ -15,10 +15,7 @@ export class SeqService {
   }
 
   getSeq(): Observable<Sequence[]> {
-    let params = new URLSearchParams();
-    params.set('Mode', 'GetSequenceListByProjID');
-    params.set('ProjID', 'RNT');
-    return this.http.get(this.url, {search: params}).map(this.extractData);
+    return this.http.get(this.url).map(this.extractData);
   }
 
   private extractData(res: Response) {
