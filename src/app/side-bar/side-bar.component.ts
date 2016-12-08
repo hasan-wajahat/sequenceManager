@@ -3,7 +3,7 @@ import {SeqService} from '../services/sequence.service';
 import {ShortService} from '../services/shot.service';
 import {Router} from '@angular/router';
 import {Sequence} from '../object-classes/service-classes';
-import {Short} from '../object-classes/service-classes'
+import {Short} from '../object-classes/service-classes';
 
 
 @Component({
@@ -51,6 +51,10 @@ export class SideBarComponent implements OnInit {
   goToShortDetail(short: string) {
     let link = ['/short', short];
     this.router.navigate(link);
+  }
+
+  goToHome(){
+    this.router.navigate(['']);
   }
 
 

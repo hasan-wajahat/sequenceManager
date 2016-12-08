@@ -5,11 +5,12 @@ import {ShortDetailComponent} from './main-page/short-detail/short-detail.compon
 import {EmptyComponent} from './main-page/empty/empty.component';
 import {UploadFormComponent}  from './main-page/upload-form/upload-form.component'
 import {LoginComponent} from './main-page/login/login.component';
+import {LoggedInGuard} from './services/logged-in.guard'
 
 const routes: Routes = [
   {path: '', component: EmptyComponent},
-  {path: 'short/:short', component: ShortDetailComponent},
-  {path: 'new-item/:short', component: UploadFormComponent},
+  {path: 'short/:short', component: ShortDetailComponent, canActivate: [LoggedInGuard]},
+  {path: 'new-item/:short', component: UploadFormComponent, canActivate: [LoggedInGuard]},
   {path: 'login', component: LoginComponent}
 ];
 

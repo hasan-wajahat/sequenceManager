@@ -1,3 +1,6 @@
-<p>
-  Select Short to display Data
-</p>
+<h1>Welcome to Sequence Manager</h1>
+<h2 *ngIf="!isLoggedIn()"> Please login to continue</h2>
+<div class="container">
+  <button class="btn btn-default logIN" (click)="goToLogin()" [disabled] = "isLoggedIn()"> Log In</button>
+  <button class="btn btn-default" (click)="logOut()" [disabled] = "!isLoggedIn()"> Log Out</button>
+</div>

@@ -1,3 +1,4 @@
+<div (click)="goToHome()" class="homeButton"> Go To Home</div>
 <div *ngFor="let seq of sequence">
   <div (click)="toggleDisplay(seq.id)" class="sequenceDiv">
     {{seq.name}}

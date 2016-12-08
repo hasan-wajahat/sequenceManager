@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
+import {LoggedInGuard} from './services/logged-in.guard';
+import { AuthService } from './services/authentication.service';
 
 import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,7 +33,7 @@ import { LoginComponent } from './main-page/login/login.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService, LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
