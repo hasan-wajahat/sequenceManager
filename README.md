@@ -1,31 +1,13 @@
 # SequenceManager
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
+This a an example app for Managing sequences and their publish histories.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Sequences and shots are commonly used in the animation and movie making, a single sequence comprises of multiple shots. And a shot can have multiple publish histories.
 
-## Code scaffolding
+The app can be used to manage those publish histories in an aesthetically pleasing way.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+The app uses json api's to communicate with the server by creating services for each of the particular models on the backend. 
 
-## Build
+For backend I have made a rails api server with rails json-api.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For security I have implemented jwt tokens so that only logged in users can access the api publish data.
